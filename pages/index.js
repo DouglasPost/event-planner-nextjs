@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import EventList from '../components/events/event-list';
 import { getFeaturedEvents } from '../helpers/api-utils';
 
@@ -5,6 +7,10 @@ function HomePage(props) {
 
   return (
     <div>
+      <Head>
+        <title>NextJS Events</title>
+        <meta name="description" content="Find a lot of great event using NextJS" />
+      </Head>
       <EventList items={props.events} />
     </div>
   );
